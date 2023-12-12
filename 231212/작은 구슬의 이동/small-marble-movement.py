@@ -9,12 +9,10 @@ D['D'] = [1, 0] #
 # r c d
 # 26 41
 # 8 3 D
-# n, t = tuple(map(int,input().split()))
-# x, y, d = tuple(input().split())
-# x, y = int(x), int(y)
+n, t = tuple(map(int,input().split()))
+x, y, d = tuple(input().split())
+x, y = int(x), int(y)
 
-n, t = 26, 41
-x, y, d = 8, 3, 'D'
 
 def in_range(x, y):
     return x > 0 and y > 0 and x <= n and y <= n
