@@ -24,7 +24,7 @@ def solution():
             sec += 1
             continue
         elif dir == 'R':
-            idir = idir + 1 % 4
+            idir = (idir + 1 )% 4
             sec += 1
             continue
 
