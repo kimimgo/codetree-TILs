@@ -20,11 +20,11 @@ def solution():
     x, y, idir, sec = 0, 0, 0, 0
     for dir in input():
         if dir == 'L':
-            idir = abs(idir - 1) % 4
+            idir = abs((idir - 1 )% 4)
             sec += 1
             continue
         elif dir == 'R':
-            idir = abs(idir + 1) % 4
+            idir = idir + 1 % 4
             sec += 1
             continue
 
@@ -32,7 +32,6 @@ def solution():
         _x, _y = x, y
         x, y = x + dpos[0], y + dpos[1]
         sec += 1
-
         if _x * x < 0 and y == 0:
             return (sec)
         elif _y * y < 0 and x == 0:
