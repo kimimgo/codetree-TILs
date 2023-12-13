@@ -15,6 +15,7 @@ mapper = {
 def solution(N):
     pos = [0, 0]
     sec = 0
+    # for d, k in zip(["N","S"],[3,3]):
     for _ in range(N):
         d, k = input().split()
         k = int(k)
@@ -22,8 +23,10 @@ def solution(N):
         dpos = list(map(lambda x: x*k, mapper[d]))
         _pos = pos
         pos = [p+dp for p, dp in zip(pos, dpos)]
-        # print(pos, sec)
-        if pos[0] * _pos[0] < 0:
+        # print(_pos,pos, sec)
+        if pos == [0,0]:
+            return sec
+        elif pos[0] * _pos[0] < 0:
             return (sec-abs(pos[0]))
         elif pos[1] * _pos[1] < 0:
             return (sec-abs(pos[1]))
