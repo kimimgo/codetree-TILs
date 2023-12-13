@@ -26,9 +26,9 @@ def solution(N):
         # print(_pos,pos, sec)
         if pos == [0,0]:
             return sec
-        elif pos[0] * _pos[0] < 0:
+        elif pos[0] * _pos[0] < 0 and pos[1] == 0:
             return (sec-abs(pos[0]))
-        elif pos[1] * _pos[1] < 0:
+        elif pos[1] * _pos[1] < 0 and pos[0] == 0:
             return (sec-abs(pos[1]))
 
     return -1
